@@ -19,4 +19,4 @@ jobs:
           deno lint
       - name: Run check
         run: |
-          deno check mod.ts
+          deno check run.ts
