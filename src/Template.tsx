@@ -1,3 +1,5 @@
+import React from "https://esm.sh/react@18.2.0";
+
 export const Template = ({ imageUrl }: { imageUrl: string }) => (
   <div
     style={{ position: "relative", width: 600, height: 400, display: "flex" }}
@@ -19,7 +21,7 @@ export const Template = ({ imageUrl }: { imageUrl: string }) => (
         justifyContent: "center",
       }}
     >
-      <p style={{ color: "white", fontSize: 120, fontWeight: "bold" }}>LGTM</p>
+      <p style={{ color: "white", fontSize: 80, fontWeight: "bold" }}>LGTM</p>
     </div>
   </div>
 );

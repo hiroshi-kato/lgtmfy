@@ -3,6 +3,7 @@ import { Resvg } from "npm:@resvg/resvg-js";
 import { Command } from "jsr:@cliffy/command@1.0.0-rc.4";
 import * as clippy from "https://deno.land/x/clippy@v1.0.0/mod.ts";
 import { Template } from "./Template.tsx";
+import React from "https://esm.sh/react@18.2.0";
 
 export const lgtmfy = async () =>
   await new Command()
@@ -18,7 +19,7 @@ export const lgtmfy = async () =>
         fonts: [
           {
             name: "Roboto-Regular",
-            data: await Deno.readFile("./fonts/Roboto-Regular.ttf"),
+            data: await Deno.readFile("./fonts/Roboto-blackItalic.ttf"),
           },
         ],
       });
