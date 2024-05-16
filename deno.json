@@ -12,6 +12,7 @@
     "jsxImportSource": "react"
   },
   "tasks": {
-    "start": "deno run -A --unstable src/main.tsx"
-  }
+    "start": "deno run --allow-read --allow-env --allow-net --allow-ffi mod.ts"
+  },
+  "unstable": ["ffi"]
 }
