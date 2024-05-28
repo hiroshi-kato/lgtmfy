@@ -2,13 +2,21 @@
 
 ## これは何？
 
-LGTM 画像を生成する CLI ツールです。
+LGTM 画像を生成する CLI ツールです。 画像URLをうけとり、LGTM
+画像を生成してGyazoにアップロードします。
 
 ## インストール
 
 ```sh
 cd lgtmfy
 deno install --allow-read --allow-env --allow-net --allow-ffi --unstable-ffi -g -f run.ts --name lgtm
+```
+
+Gyazoのアクセストークンを環境変数に設定してください。
+アクセストークンは[こちら](https://gyazo.com/oauth/applications)から取得できます。
+
+```.env
+GYAZO_ACCESS_TOKEN=${YOUR_GYAZO_ACCESS_TOKEN}
 ```
 
 ## 使い方

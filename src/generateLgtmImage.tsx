@@ -1,8 +1,8 @@
-import satori from 'https://esm.sh/satori@0.10.13';
-import { Resvg } from 'npm:@resvg/resvg-js';
-import * as clippy from 'https://deno.land/x/clippy@v1.0.0/mod.ts';
-import { Template } from './Template.tsx';
-import { uploadToGyazo } from './gyazo.ts';
+import React from "https://esm.sh/react@18.2.0";
+import satori from "https://esm.sh/satori@0.10.13";
+import { Resvg } from "npm:@resvg/resvg-js";
+import { Template } from "./Template.tsx";
+import { uploadToGyazo } from "./gyazo.ts";
 
 export const generateLGTMImage = async (imageUrl: string) => {
   const svg = await satori(<Template imageUrl={imageUrl} />, {
@@ -10,15 +10,15 @@ export const generateLGTMImage = async (imageUrl: string) => {
     height: 600,
     fonts: [
       {
-        name: 'Roboto-Regular',
-        data: await Deno.readFile('./fonts/Roboto-blackItalic.ttf'),
+        name: "Roboto-Regular",
+        data: await Deno.readFile("./fonts/Roboto-blackItalic.ttf"),
       },
     ],
   });
 
   const resvg = new Resvg(svg, {
     fitTo: {
-      mode: 'width',
+      mode: "width",
       value: 800,
     },
   });
