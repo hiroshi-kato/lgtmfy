@@ -4,6 +4,9 @@ import { Resvg } from "npm:@resvg/resvg-js";
 import { Template } from "./Template.tsx";
 import { uploadToGyazo } from "./gyazo.ts";
 
+const __dirname = new URL(".", import.meta.url).pathname;
+const fontPath = `${__dirname}fonts/Roboto-blackItalic.ttf`;
+
 export const generateLGTMImage = async (imageUrl: string) => {
   const svg = await satori(<Template imageUrl={imageUrl} />, {
     width: 800,
@@ -11,7 +14,7 @@ export const generateLGTMImage = async (imageUrl: string) => {
     fonts: [
       {
         name: "Roboto-Regular",
-        data: await Deno.readFile("./fonts/Roboto-blackItalic.ttf"),
+        data: await Deno.readFile(fontPath),
       },
     ],
   });
