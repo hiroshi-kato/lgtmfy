@@ -1,0 +1,31 @@
+.template-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  display: flex;
+}
+
+.template-image {
+  width: 800px;
+  height: 600px;
+  object-fit: contain;
+}
+
+.template-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template-text {
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 1.5rem;
+  text-shadow: 2px 2px 3px #808080;
+}
