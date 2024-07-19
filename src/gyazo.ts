@@ -11,6 +11,7 @@ export const uploadToGyazo = async (image?: Uint8Array) => {
   const formData = new FormData();
   formData.append("imagedata", new Blob([image]));
   formData.append("access_token", token);
+  formData.append("desc", "#lgtm");
 
   const res = await fetch(END_POINT, {
     method: "POST",
