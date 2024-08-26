@@ -2,8 +2,8 @@
 
 ## これは何？
 
-LGTM 画像を生成する CLI ツールです。 画像URLをうけとり、LGTM
-画像を生成してGyazoにアップロードします。
+LGTM 画像を生成する CLI ツールです。 画像 URL をうけとり、LGTM
+画像を生成して Gyazo にアップロードします。
 
 ## インストール
 
@@ -12,7 +12,7 @@ cd lgtmfy
 deno install --allow-read --allow-env --allow-net --allow-ffi --unstable-ffi -g -f run.ts --name lgtm
 ```
 
-Gyazoのアクセストークンを環境変数に設定してください。
+Gyazo のアクセストークンを環境変数に設定してください。
 アクセストークンは[こちら](https://gyazo.com/oauth/applications)から取得できます。
 
 ```.env
@@ -30,5 +30,5 @@ lgtm ${IMAGE_URL}
 `deno install`を使わない場合は、本ディレクトリのルートで以下のコマンドを実行してください。
 
 ```sh
-deno task start ${IMAGE_URL}
+deno run start ${IMAGE_URL}
 ```
