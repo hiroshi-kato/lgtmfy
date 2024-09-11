@@ -27,7 +27,7 @@ export const Template = ({ imageUrl }: { imageUrl: string }) => (
           fontSize: 100,
           fontWeight: "bold",
           letterSpacing: "1.5rem",
-          textShadow: "2px 2px 3px #808080"
+          textShadow: "2px 2px 3px #808080",
         }}
       >
         LGTM
