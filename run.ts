@@ -9,7 +9,12 @@ export const runLgtmfy = async () =>
     .description("Generate LGTM image from image URL")
     .arguments("<imageUrl:string>")
     .action(async (options, ...args) => {
-      const imageUrl = args[0];
+      const imageUrl = args[0].replace(/\?.+$/, "");
+      if (!imageUrl.match(/\.(jpeg|jpg|png|)$/)) {
+        console.error("Invalid image URL. Please provide a valid image URL.");
+        return;
+      }
+
       const url = await generateLGTMImage(imageUrl);
       const markdown = `![LGTM](${url})`;
 
