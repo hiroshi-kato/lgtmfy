@@ -1,4 +1,4 @@
-import * as clippy from "https://deno.land/x/clippy@v1.0.0/mod.ts";
+import { copy } from "https://deno.land/x/clipboard@v0.0.3/mod.ts";
 import { Command } from "jsr:@cliffy/command@1.0.0-rc.4";
 import { generateLGTMImage } from "./src/generateLgtmImage.tsx";
 
@@ -18,7 +18,7 @@ export const runLgtmfy = async () =>
       const url = await generateLGTMImage(imageUrl);
       const markdown = `![LGTM](${url})`;
 
-      await clippy.writeText(markdown);
+      await copy(markdown);
 
       console.log("Image generated at clipboard!");
     })
