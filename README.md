@@ -9,7 +9,7 @@ Gyazo にアップロードします。
 
 ```sh
 cd lgtmfy
-deno install --allow-read --allow-env --allow-net --allow-ffi --unstable-ffi -g -f run.ts --name lgtm
+deno install --allow-run --allow-read --allow-env --allow-net --allow-ffi --unstable-ffi -g -f run.ts --name lgtm
 ```
 
 Gyazo のアクセストークンを環境変数に設定してください。
