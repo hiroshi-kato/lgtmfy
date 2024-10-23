@@ -1,133 +1,121 @@
 {
-  "version": "3",
-  "packages": {
-    "specifiers": {
-      "jsr:@cliffy/command@1.0.0-rc.4": "jsr:@cliffy/command@1.0.0-rc.4",
-      "jsr:@cliffy/flags@1.0.0-rc.4": "jsr:@cliffy/flags@1.0.0-rc.4",
-      "jsr:@cliffy/table@1.0.0-rc.4": "jsr:@cliffy/table@1.0.0-rc.4",
-      "jsr:@std/assert@^0.221.0": "jsr:@std/assert@0.221.0",
-      "jsr:@std/console@0.221": "jsr:@std/console@0.221.0",
-      "jsr:@std/fmt@0.221": "jsr:@std/fmt@0.221.0",
-      "jsr:@std/text@0.221": "jsr:@std/text@0.221.0",
-      "npm:@resvg/resvg-js": "npm:@resvg/resvg-js@2.6.2"
+  "version": "4",
+  "specifiers": {
+    "jsr:@cliffy/command@1.0.0-rc.4": "1.0.0-rc.4",
+    "jsr:@cliffy/flags@1.0.0-rc.4": "1.0.0-rc.4",
+    "jsr:@cliffy/table@1.0.0-rc.4": "1.0.0-rc.4",
+    "jsr:@std/assert@0.221": "0.221.0",
+    "jsr:@std/console@0.221": "0.221.0",
+    "jsr:@std/fmt@0.221": "0.221.0",
+    "jsr:@std/text@0.221": "0.221.0",
+    "npm:@resvg/resvg-js@*": "2.6.2"
+  },
+  "jsr": {
+    "@cliffy/command@1.0.0-rc.4": {
+      "integrity": "709884ffe0f53ce3edafa92b58223634397878fbf6dcabe0c74ea0108273b9f7",
+      "dependencies": [
+        "jsr:@cliffy/flags",
+        "jsr:@cliffy/table",
+        "jsr:@std/fmt",
+        "jsr:@std/text"
+      ]
     },
-    "jsr": {
-      "@cliffy/command@1.0.0-rc.4": {
-        "integrity": "709884ffe0f53ce3edafa92b58223634397878fbf6dcabe0c74ea0108273b9f7",
-        "dependencies": [
-          "jsr:@cliffy/flags@1.0.0-rc.4",
-          "jsr:@cliffy/table@1.0.0-rc.4",
-          "jsr:@std/fmt@0.221",
-          "jsr:@std/text@0.221"
-        ]
-      },
-      "@cliffy/flags@1.0.0-rc.4": {
-        "integrity": "29f370ade4ddf6e150a4d25fc44661234c19870ffcf7fb07cd100f1843fcd6e1",
-        "dependencies": [
-          "jsr:@std/text@0.221"
-        ]
-      },
-      "@cliffy/table@1.0.0-rc.4": {
-        "integrity": "990e4e0b3910e6c9cf7a5b4318b8f5e121cf681494c94fd113febb9b4d4c0741",
-        "dependencies": [
-          "jsr:@std/console@0.221",
-          "jsr:@std/fmt@0.221"
-        ]
-      },
-      "@std/assert@0.221.0": {
-        "integrity": "a5f1aa6e7909dbea271754fd4ab3f4e687aeff4873b4cef9a320af813adb489a"
-      },
-      "@std/console@0.221.0": {
-        "integrity": "8f2afc1f3f14f5d6039c0c767f057e4aa1897d2210e167c4667cb155cafb9d11",
-        "dependencies": [
-          "jsr:@std/assert@^0.221.0"
-        ]
-      },
-      "@std/fmt@0.221.0": {
-        "integrity": "379fed69bdd9731110f26b9085aeb740606b20428ce6af31ef6bd45ef8efa62a"
-      },
-      "@std/text@0.221.0": {
-        "integrity": "a2f89ceb0d8851cd33e6774064621a1da9fbc36578cf4f02c5b5bcd7e8c84b67",
-        "dependencies": [
-          "jsr:@std/assert@^0.221.0"
-        ]
-      }
+    "@cliffy/flags@1.0.0-rc.4": {
+      "integrity": "29f370ade4ddf6e150a4d25fc44661234c19870ffcf7fb07cd100f1843fcd6e1",
+      "dependencies": [
+        "jsr:@std/text"
+      ]
     },
-    "npm": {
-      "@resvg/resvg-js-android-arm-eabi@2.6.2": {
-        "integrity": "sha512-FrJibrAk6v29eabIPgcTUMPXiEz8ssrAk7TXxsiZzww9UTQ1Z5KAbFJs+Z0Ez+VZTYgnE5IQJqBcoSiMebtPHA==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-android-arm64@2.6.2": {
-        "integrity": "sha512-VcOKezEhm2VqzXpcIJoITuvUS/fcjIw5NA/w3tjzWyzmvoCdd+QXIqy3FBGulWdClvp4g+IfUemigrkLThSjAQ==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-darwin-arm64@2.6.2": {
-        "integrity": "sha512-nmok2LnAd6nLUKI16aEB9ydMC6Lidiiq2m1nEBDR1LaaP7FGs4AJ90qDraxX+CWlVuRlvNjyYJTNv8qFjtL9+A==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-darwin-x64@2.6.2": {
-        "integrity": "sha512-GInyZLjgWDfsVT6+SHxQVRwNzV0AuA1uqGsOAW+0th56J7Nh6bHHKXHBWzUrihxMetcFDmQMAX1tZ1fZDYSRsw==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-linux-arm-gnueabihf@2.6.2": {
-        "integrity": "sha512-YIV3u/R9zJbpqTTNwTZM5/ocWetDKGsro0SWp70eGEM9eV2MerWyBRZnQIgzU3YBnSBQ1RcxRZvY/UxwESfZIw==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-linux-arm64-gnu@2.6.2": {
-        "integrity": "sha512-zc2BlJSim7YR4FZDQ8OUoJg5holYzdiYMeobb9pJuGDidGL9KZUv7SbiD4E8oZogtYY42UZEap7dqkkYuA91pg==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-linux-arm64-musl@2.6.2": {
-        "integrity": "sha512-3h3dLPWNgSsD4lQBJPb4f+kvdOSJHa5PjTYVsWHxLUzH4IFTJUAnmuWpw4KqyQ3NA5QCyhw4TWgxk3jRkQxEKg==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-linux-x64-gnu@2.6.2": {
-        "integrity": "sha512-IVUe+ckIerA7xMZ50duAZzwf1U7khQe2E0QpUxu5MBJNao5RqC0zwV/Zm965vw6D3gGFUl7j4m+oJjubBVoftw==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-linux-x64-musl@2.6.2": {
-        "integrity": "sha512-UOf83vqTzoYQO9SZ0fPl2ZIFtNIz/Rr/y+7X8XRX1ZnBYsQ/tTb+cj9TE+KHOdmlTFBxhYzVkP2lRByCzqi4jQ==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-win32-arm64-msvc@2.6.2": {
-        "integrity": "sha512-7C/RSgCa+7vqZ7qAbItfiaAWhyRSoD4l4BQAbVDqRRsRgY+S+hgS3in0Rxr7IorKUpGE69X48q6/nOAuTJQxeQ==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-win32-ia32-msvc@2.6.2": {
-        "integrity": "sha512-har4aPAlvjnLcil40AC77YDIk6loMawuJwFINEM7n0pZviwMkMvjb2W5ZirsNOZY4aDbo5tLx0wNMREp5Brk+w==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js-win32-x64-msvc@2.6.2": {
-        "integrity": "sha512-ZXtYhtUr5SSaBrUDq7DiyjOFJqBVL/dOBN7N/qmi/pO0IgiWW/f/ue3nbvu9joWE5aAKDoIzy/CxsY0suwGosQ==",
-        "dependencies": {}
-      },
-      "@resvg/resvg-js@2.6.2": {
-        "integrity": "sha512-xBaJish5OeGmniDj9cW5PRa/PtmuVU3ziqrbr5xJj901ZDN4TosrVaNZpEiLZAxdfnhAe7uQ7QFWfjPe9d9K2Q==",
-        "dependencies": {
-          "@resvg/resvg-js-android-arm-eabi": "@resvg/resvg-js-android-arm-eabi@2.6.2",
-          "@resvg/resvg-js-android-arm64": "@resvg/resvg-js-android-arm64@2.6.2",
-          "@resvg/resvg-js-darwin-arm64": "@resvg/resvg-js-darwin-arm64@2.6.2",
-          "@resvg/resvg-js-darwin-x64": "@resvg/resvg-js-darwin-x64@2.6.2",
-          "@resvg/resvg-js-linux-arm-gnueabihf": "@resvg/resvg-js-linux-arm-gnueabihf@2.6.2",
-          "@resvg/resvg-js-linux-arm64-gnu": "@resvg/resvg-js-linux-arm64-gnu@2.6.2",
-          "@resvg/resvg-js-linux-arm64-musl": "@resvg/resvg-js-linux-arm64-musl@2.6.2",
-          "@resvg/resvg-js-linux-x64-gnu": "@resvg/resvg-js-linux-x64-gnu@2.6.2",
-          "@resvg/resvg-js-linux-x64-musl": "@resvg/resvg-js-linux-x64-musl@2.6.2",
-          "@resvg/resvg-js-win32-arm64-msvc": "@resvg/resvg-js-win32-arm64-msvc@2.6.2",
-          "@resvg/resvg-js-win32-ia32-msvc": "@resvg/resvg-js-win32-ia32-msvc@2.6.2",
-          "@resvg/resvg-js-win32-x64-msvc": "@resvg/resvg-js-win32-x64-msvc@2.6.2"
-        }
-      }
+    "@cliffy/table@1.0.0-rc.4": {
+      "integrity": "990e4e0b3910e6c9cf7a5b4318b8f5e121cf681494c94fd113febb9b4d4c0741",
+      "dependencies": [
+        "jsr:@std/console",
+        "jsr:@std/fmt"
+      ]
+    },
+    "@std/assert@0.221.0": {
+      "integrity": "a5f1aa6e7909dbea271754fd4ab3f4e687aeff4873b4cef9a320af813adb489a"
+    },
+    "@std/console@0.221.0": {
+      "integrity": "8f2afc1f3f14f5d6039c0c767f057e4aa1897d2210e167c4667cb155cafb9d11",
+      "dependencies": [
+        "jsr:@std/assert"
+      ]
+    },
+    "@std/fmt@0.221.0": {
+      "integrity": "379fed69bdd9731110f26b9085aeb740606b20428ce6af31ef6bd45ef8efa62a"
+    },
+    "@std/text@0.221.0": {
+      "integrity": "a2f89ceb0d8851cd33e6774064621a1da9fbc36578cf4f02c5b5bcd7e8c84b67",
+      "dependencies": [
+        "jsr:@std/assert"
+      ]
+    }
+  },
+  "npm": {
+    "@resvg/resvg-js-android-arm-eabi@2.6.2": {
+      "integrity": "sha512-FrJibrAk6v29eabIPgcTUMPXiEz8ssrAk7TXxsiZzww9UTQ1Z5KAbFJs+Z0Ez+VZTYgnE5IQJqBcoSiMebtPHA=="
+    },
+    "@resvg/resvg-js-android-arm64@2.6.2": {
+      "integrity": "sha512-VcOKezEhm2VqzXpcIJoITuvUS/fcjIw5NA/w3tjzWyzmvoCdd+QXIqy3FBGulWdClvp4g+IfUemigrkLThSjAQ=="
+    },
+    "@resvg/resvg-js-darwin-arm64@2.6.2": {
+      "integrity": "sha512-nmok2LnAd6nLUKI16aEB9ydMC6Lidiiq2m1nEBDR1LaaP7FGs4AJ90qDraxX+CWlVuRlvNjyYJTNv8qFjtL9+A=="
+    },
+    "@resvg/resvg-js-darwin-x64@2.6.2": {
+      "integrity": "sha512-GInyZLjgWDfsVT6+SHxQVRwNzV0AuA1uqGsOAW+0th56J7Nh6bHHKXHBWzUrihxMetcFDmQMAX1tZ1fZDYSRsw=="
+    },
+    "@resvg/resvg-js-linux-arm-gnueabihf@2.6.2": {
+      "integrity": "sha512-YIV3u/R9zJbpqTTNwTZM5/ocWetDKGsro0SWp70eGEM9eV2MerWyBRZnQIgzU3YBnSBQ1RcxRZvY/UxwESfZIw=="
+    },
+    "@resvg/resvg-js-linux-arm64-gnu@2.6.2": {
+      "integrity": "sha512-zc2BlJSim7YR4FZDQ8OUoJg5holYzdiYMeobb9pJuGDidGL9KZUv7SbiD4E8oZogtYY42UZEap7dqkkYuA91pg=="
+    },
+    "@resvg/resvg-js-linux-arm64-musl@2.6.2": {
+      "integrity": "sha512-3h3dLPWNgSsD4lQBJPb4f+kvdOSJHa5PjTYVsWHxLUzH4IFTJUAnmuWpw4KqyQ3NA5QCyhw4TWgxk3jRkQxEKg=="
+    },
+    "@resvg/resvg-js-linux-x64-gnu@2.6.2": {
+      "integrity": "sha512-IVUe+ckIerA7xMZ50duAZzwf1U7khQe2E0QpUxu5MBJNao5RqC0zwV/Zm965vw6D3gGFUl7j4m+oJjubBVoftw=="
+    },
+    "@resvg/resvg-js-linux-x64-musl@2.6.2": {
+      "integrity": "sha512-UOf83vqTzoYQO9SZ0fPl2ZIFtNIz/Rr/y+7X8XRX1ZnBYsQ/tTb+cj9TE+KHOdmlTFBxhYzVkP2lRByCzqi4jQ=="
+    },
+    "@resvg/resvg-js-win32-arm64-msvc@2.6.2": {
+      "integrity": "sha512-7C/RSgCa+7vqZ7qAbItfiaAWhyRSoD4l4BQAbVDqRRsRgY+S+hgS3in0Rxr7IorKUpGE69X48q6/nOAuTJQxeQ=="
+    },
+    "@resvg/resvg-js-win32-ia32-msvc@2.6.2": {
+      "integrity": "sha512-har4aPAlvjnLcil40AC77YDIk6loMawuJwFINEM7n0pZviwMkMvjb2W5ZirsNOZY4aDbo5tLx0wNMREp5Brk+w=="
+    },
+    "@resvg/resvg-js-win32-x64-msvc@2.6.2": {
+      "integrity": "sha512-ZXtYhtUr5SSaBrUDq7DiyjOFJqBVL/dOBN7N/qmi/pO0IgiWW/f/ue3nbvu9joWE5aAKDoIzy/CxsY0suwGosQ=="
+    },
+    "@resvg/resvg-js@2.6.2": {
+      "integrity": "sha512-xBaJish5OeGmniDj9cW5PRa/PtmuVU3ziqrbr5xJj901ZDN4TosrVaNZpEiLZAxdfnhAe7uQ7QFWfjPe9d9K2Q==",
+      "dependencies": [
+        "@resvg/resvg-js-android-arm-eabi",
+        "@resvg/resvg-js-android-arm64",
+        "@resvg/resvg-js-darwin-arm64",
+        "@resvg/resvg-js-darwin-x64",
+        "@resvg/resvg-js-linux-arm-gnueabihf",
+        "@resvg/resvg-js-linux-arm64-gnu",
+        "@resvg/resvg-js-linux-arm64-musl",
+        "@resvg/resvg-js-linux-x64-gnu",
+        "@resvg/resvg-js-linux-x64-musl",
+        "@resvg/resvg-js-win32-arm64-msvc",
+        "@resvg/resvg-js-win32-ia32-msvc",
+        "@resvg/resvg-js-win32-x64-msvc"
+      ]
     }
   },
   "redirects": {
     "https://esm.sh/v128/@types/react@~18.2/index.d.ts": "https://esm.sh/v128/@types/react@18.2.38/index.d.ts",
-    "https://esm.sh/v128/@types/react@~18.2/jsx-runtime~.d.ts": "https://esm.sh/v128/@types/react@18.2.38/jsx-runtime~.d.ts"
+    "https://esm.sh/v128/@types/react@~18.2/jsx-runtime~.d.ts": "https://esm.sh/v128/@types/react@18.2.38/jsx-runtime~.d.ts",
+    "https://esm.sh/v135/@types/react-dom@~18.2/index.d.ts": "https://esm.sh/v135/@types/react-dom@18.2.25/index.d.ts"
   },
   "remote": {
     "https://deno.land/std@0.203.0/dotenv/mod.ts": "1da8c6d0e7f7d8a5c2b19400b763bc11739df24acec235dda7ea2cfd3d300057",
     "https://deno.land/x/clipboard@v0.0.3/mod.ts": "5b68fe3b710b852de5273c135fc3c11b2b4050577401ee994161380bd8cab219",
+    "https://esm.sh/react-dom@18.2.0": "f6b0d147f7c364819144f06e24839ed89354ce25d8b6608de57871130b19a0b2",
     "https://esm.sh/react@18.2.0": "04ad7dc6d11fa27b24c136686a334ecdd19e972fae627cd98cbdc13cdac238c2",
     "https://esm.sh/react@18.2.0/jsx-runtime": "aa011b336e339e6eaacc89787e7e3d6eb726b3701d9f8ac7fcd01db1595357cb",
     "https://esm.sh/satori@0.10.13": "ac00887915b3e3c47eeb8b490d5907a7ca2a0a21c22e8ecbc728457e94eba753",
@@ -146,7 +134,9 @@
     "https://esm.sh/v135/linebreak@1.1.0/denonext/linebreak.mjs": "92506ad05c1bf348fe57a34cbf3caaacdeea76d104966d93176c88d7a3a23527",
     "https://esm.sh/v135/parse-css-color@0.2.1/denonext/parse-css-color.mjs": "d7c98d492f030ec53dfd8b80a464add5de8a0f9cd539dbebfd5461e9743a9d9b",
     "https://esm.sh/v135/postcss-value-parser@4.2.0/denonext/postcss-value-parser.mjs": "0873445cb149a5a1d815b526f77a989991ee196cbbc578c508f44c9974d7505c",
+    "https://esm.sh/v135/react-dom@18.2.0/denonext/react-dom.mjs": "8191fc377ea7083cca5640699c4abd75de033089eb932799e29aa04bb136838f",
     "https://esm.sh/v135/satori@0.10.13/denonext/satori.mjs": "cef43cc9bf7c3ebedccc76e5e936eeecf103a97faed6dd594aa499466e0b4b75",
+    "https://esm.sh/v135/scheduler@0.23.0/denonext/scheduler.mjs": "cdbc6d2823e2c6fffcb14501146ff2602a38c48d3c9dd9268f308e833ede2b49",
     "https://esm.sh/v135/tiny-inflate@1.0.3/denonext/tiny-inflate.mjs": "b05e99b89711075c2b4b7858168f116704186a74f15b49a33cd9f637af4310ac",
     "https://esm.sh/v135/unicode-trie@2.0.0/denonext/unicode-trie.mjs": "1eed05d57f1f6d380eb8349a5cabdeaafec68b86c762a5fd762a9ac3ff3138d0",
     "https://esm.sh/v135/yoga-wasm-web@0.3.3/denonext/asm.js": "5bf8284e1aa9da16ea9a5befbcc404f8f9446e04f1c3b95ee3b9fbb916eb56aa"

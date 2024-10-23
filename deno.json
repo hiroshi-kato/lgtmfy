@@ -1,5 +1,6 @@
 {
   "name": "lgtmify",
+  "version": "0.1.0",
   "description": "CLI tool to generate LGTM images with a given image URL",
   "imports": {
     "react": "https://esm.sh/react@18.2.0",
@@ -9,7 +10,8 @@
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "types": ["react", "react-dom"]
   },
   "tasks": {
     "start": "deno run --allow-run --allow-read --allow-env --allow-net --allow-ffi --unstable-ffi run.ts"
