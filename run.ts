@@ -11,7 +11,7 @@ export const runLgtmfy = async () =>
     .arguments("<imageUrl:string>")
     .action(async (options, ...args) => {
       const imageUrl = args[0].replace(/\?.+$/, "");
-      if (!imageUrl.match(/\.(jpeg|jpg|png|)$/)) {
+      if (!imageUrl.match(/\.(jpeg|jpg|png|gif|webp)$/)) {
         await $`echo "Invalid image URL. Please provide a valid image URL."`;
         return;
       }
