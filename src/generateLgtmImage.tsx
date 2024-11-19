@@ -5,7 +5,7 @@ import { Template } from "./Template.tsx";
 import { uploadToGyazo } from "./gyazo.ts";
 
 const __dirname = new URL(".", import.meta.url).pathname;
-const fontPath = `${__dirname}fonts/Roboto-blackItalic.ttf`;
+const fontPath = `${__dirname}fonts/DelaGothicOne-Regular.ttf`;
 
 export const generateLGTMImage = async (imageUrl: string) => {
   const svg = await satori(<Template imageUrl={imageUrl} />, {
