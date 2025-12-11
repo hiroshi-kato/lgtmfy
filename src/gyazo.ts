@@ -1,5 +1,6 @@
-const END_POINT = "https://upload.gyazo.com/api/upload";
 import * as mod from "https://deno.land/std@0.203.0/dotenv/mod.ts";
+
+const END_POINT = "https://upload.gyazo.com/api/upload";
 
 await mod.load({ export: true });
 
@@ -12,6 +13,7 @@ export const uploadToGyazo = async (image?: Uint8Array) => {
   formData.append("imagedata", new Blob([image]));
   formData.append("access_token", token);
   formData.append("desc", "#lgtm");
+  formData.append("access_policy", "anyone");
 
   const res = await fetch(END_POINT, {
     method: "POST",
