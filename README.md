@@ -9,7 +9,7 @@ Gyazo にアップロードします。
 
 ```sh
 cd lgtmfy
-deno install --allow-run --allow-read --allow-env --allow-net --allow-ffi --unstable-ffi -g -f run.ts --name lgtm
+deno install --allow-run --allow-read --allow-write --allow-env --allow-net --allow-ffi --unstable-ffi -g -f run.ts --name lgtm
 ```
 
 Gyazo のアクセストークンを環境変数に設定してください。
@@ -25,10 +25,17 @@ GYAZO_ACCESS_TOKEN=${YOUR_GYAZO_ACCESS_TOKEN}
 lgtm ${IMAGE_URL}
 ```
 
-生成された画像は、クリップボードにコピーされます。
+生成された画像は、クリップボードに画像データとしてコピーされます（macOSのみ対応）。
+また、GyazoにアップロードされたURLが標準出力に表示されます。
 
 `deno install`を使わない場合は、本ディレクトリのルートで以下のコマンドを実行してください。
 
 ```sh
-deno run start ${IMAGE_URL}
+deno run --allow-run --allow-read --allow-write --allow-env --allow-net --allow-ffi --unstable-ffi run.ts ${IMAGE_URL}
+```
+
+または、`deno.json` で定義されたタスクを使用：
+
+```sh
+deno task start ${IMAGE_URL}
 ```

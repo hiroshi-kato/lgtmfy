@@ -1,4 +1,4 @@
-import * as mod from "https://deno.land/std@0.203.0/dotenv/mod.ts";
+import * as mod from "dotenv";
 
 const END_POINT = "https://upload.gyazo.com/api/upload";
 
@@ -9,8 +9,9 @@ export const uploadToGyazo = async (image?: Uint8Array) => {
   const token = Deno.env.get("GYAZO_ACCESS_TOKEN");
   if (!token) throw new Error("GYAZO_ACCESS_TOKEN is required");
 
+  const bytes = new Uint8Array(image);
   const formData = new FormData();
-  formData.append("imagedata", new Blob([image]));
+  formData.append("imagedata", new Blob([bytes]));
   formData.append("access_token", token);
   formData.append("desc", "#lgtm");
   formData.append("access_policy", "anyone");

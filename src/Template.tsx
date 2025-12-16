@@ -1,12 +1,10 @@
-import React from "https://esm.sh/react@18.2.0";
-
 export const Template = ({ imageUrl }: { imageUrl: string }) => (
   <div
     style={{ position: "relative", width: 800, height: 600, display: "flex" }}
   >
     <img
       src={imageUrl}
-      alt="base image"
+      alt="base"
       style={{ width: 800, height: 600, objectFit: "contain" }}
     />
     <div
