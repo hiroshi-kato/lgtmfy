@@ -1,11 +1,11 @@
 export const Template = ({ imageUrl }: { imageUrl: string }) => (
   <div
-    style={{ position: "relative", width: 800, height: 600, display: "flex" }}
+    style={{ position: "relative", width: 400, height: 300, display: "flex" }}
   >
     <img
       src={imageUrl}
       alt="base"
-      style={{ width: 800, height: 600, objectFit: "contain" }}
+      style={{ width: 400, height: 300, objectFit: "contain" }}
     />
     <div
       style={{

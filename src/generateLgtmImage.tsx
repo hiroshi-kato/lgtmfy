@@ -13,8 +13,8 @@ const fontPath = `${__dirname}fonts/DelaGothicOne-Regular.ttf`;
  */
 export const renderLGTM = async (imageUrl: string): Promise<Uint8Array> => {
   const svg = await satori(<Template imageUrl={imageUrl} />, {
-    width: 800,
-    height: 600,
+    width: 400,
+    height: 300,
     fonts: [
       {
         name: "Roboto-Regular",
@@ -26,7 +26,7 @@ export const renderLGTM = async (imageUrl: string): Promise<Uint8Array> => {
   const resvg = new Resvg(svg, {
     fitTo: {
       mode: "width",
-      value: 800,
+      value: 400,
     },
   });
   const pngData = resvg.render();

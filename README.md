@@ -25,8 +25,23 @@ GYAZO_ACCESS_TOKEN=${YOUR_GYAZO_ACCESS_TOKEN}
 lgtm ${IMAGE_URL}
 ```
 
-生成された画像は、クリップボードに画像データとしてコピーされます（macOSのみ対応）。
+デフォルトでは、生成された画像を Gyazo にアップロードし、GitHub に貼れる Markdown をクリップボードにコピーします（macOSのみ対応）。
 また、GyazoにアップロードされたURLが標準出力に表示されます。
+
+### クリップボード出力の切り替え（macOSのみ）
+
+- `--clipboard=markdown`（デフォルト）: `![LGTM](<Gyazo URL>)` をコピー
+- `--clipboard=image`: PNG 画像データをコピー
+- `--clipboard=none`: クリップボードへコピーしない
+
+例:
+
+```sh
+lgtm ${IMAGE_URL} # markdown形式でコピー
+lgtm --clipboard=markdown ${IMAGE_URL} # markdown形式でコピー
+lgtm --clipboard=image ${IMAGE_URL} # PNG画像データをコピー
+lgtm --clipboard=none ${IMAGE_URL} # クリップボードへコピーしない
+```
 
 `deno install`を使わない場合は、本ディレクトリのルートで以下のコマンドを実行してください。
 
