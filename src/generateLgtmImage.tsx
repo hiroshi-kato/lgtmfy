@@ -12,32 +12,32 @@ const fontPath = `${__dirname}fonts/DelaGothicOne-Regular.ttf`;
  * @returns PNG画像のUint8Arrayバッファ
  */
 export const renderLGTM = async (imageUrl: string): Promise<Uint8Array> => {
-	const fontBytes = await Deno.readFile(fontPath);
-	const fontData = fontBytes.buffer.slice(
-		fontBytes.byteOffset,
-		fontBytes.byteOffset + fontBytes.byteLength,
-	);
-	const svg = await satori(<Template imageUrl={imageUrl} />, {
-		width: 600,
-		height: 450,
-		fonts: [
-			{
-				name: "Roboto-Regular",
-				data: fontData,
-			},
-		],
-	});
+  const fontBytes = await Deno.readFile(fontPath);
+  const fontData = fontBytes.buffer.slice(
+    fontBytes.byteOffset,
+    fontBytes.byteOffset + fontBytes.byteLength,
+  );
+  const svg = await satori(<Template imageUrl={imageUrl} />, {
+    width: 600,
+    height: 450,
+    fonts: [
+      {
+        name: "Roboto-Regular",
+        data: fontData,
+      },
+    ],
+  });
 
-	const resvg = new Resvg(svg, {
-		fitTo: {
-			mode: "width",
-			value: 600,
-		},
-	});
-	const pngData = resvg.render();
-	const pngBuffer = pngData.asPng();
+  const resvg = new Resvg(svg, {
+    fitTo: {
+      mode: "width",
+      value: 600,
+    },
+  });
+  const pngData = resvg.render();
+  const pngBuffer = pngData.asPng();
 
-	return pngBuffer;
+  return pngBuffer;
 };
 
 /**
@@ -46,7 +46,7 @@ export const renderLGTM = async (imageUrl: string): Promise<Uint8Array> => {
  * @returns Gyazoアップロード後のURL
  */
 export const generateLGTMImage = async (imageUrl: string): Promise<string> => {
-	const pngBuffer = await renderLGTM(imageUrl);
-	const json = await uploadToGyazo(pngBuffer);
-	return json.url;
+  const pngBuffer = await renderLGTM(imageUrl);
+  const json = await uploadToGyazo(pngBuffer);
+  return json.url;
 };

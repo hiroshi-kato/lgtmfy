@@ -31,5 +31,3 @@ export const copyTextToClipboard = async (text: string): Promise<void> => {
     throw new Error("pbcopy実行に失敗しました。");
   }
 };
-
-

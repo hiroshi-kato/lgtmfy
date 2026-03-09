@@ -25,7 +25,8 @@ GYAZO_ACCESS_TOKEN=${YOUR_GYAZO_ACCESS_TOKEN}
 lgtm ${IMAGE_URL}
 ```
 
-デフォルトでは、生成された画像を Gyazo にアップロードし、GitHub に貼れる Markdown をクリップボードにコピーします（macOSのみ対応）。
+デフォルトでは、生成された画像を Gyazo にアップロードし、GitHub に貼れる
+Markdown をクリップボードにコピーします（macOSのみ対応）。
 また、GyazoにアップロードされたURLが標準出力に表示されます。
 
 ### クリップボード出力の切り替え（macOSのみ）
